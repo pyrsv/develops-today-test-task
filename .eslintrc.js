@@ -3,6 +3,7 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'eslint:recommended',
+    "plugin:react/recommended",
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
   ],
@@ -10,5 +11,9 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  rules: {},
+  rules: {
+    "react/prop-types": [2, { ignore: ['children'] }]
+  },
+
+
 };
