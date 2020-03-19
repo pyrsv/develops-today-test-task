@@ -1,18 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Post: React.FC = () => {
+interface PostProps {
+  title: string;
+  body: string;
+}
+
+const Post: React.FC<PostProps> = ({ title, body}) => {
   return (
     <PostContainer>
-      <PostTitle>Заголовок поста</PostTitle>
-      <PostBody>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque autem beatae, delectus dicta dolorum
-        earum eligendi enim eos eveniet facere in, laborum libero, nihil perspiciatis quod similique temporibus totam?
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque autem beatae, delectus dicta dolorum
-        earum eligendi enim eos eveniet facere in, laborum libero, nihil perspiciatis quod similique temporibus totam?
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda atque autem beatae, delectus dicta dolorum
-        earum eligendi enim eos eveniet facere in, laborum libero, nihil perspiciatis quod similique temporibus totam?
-      </PostBody>
+      <PostTitle>{title}</PostTitle>
+      <PostBody>{body}</PostBody>
     </PostContainer>
   );
 };

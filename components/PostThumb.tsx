@@ -2,17 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 
-const PostThumb: React.FC = () => {
+interface PostThumb {
+  title: string;
+  body: string;
+  id: number;
+}
+
+const PostThumb: React.FC<PostThumb> = ({ id, body, title }) => {
+  // eslint-disable-next-line no-undef
   return (
-    <Link href="/">
+    <Link href="/posts/[postid]" as={`/posts/${id}`}>
       <PostThumbLink>
         <StyledPostThumb>
-          <PostThumbTitle>Заголовок поста</PostThumbTitle>
-          <PostThumbBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facilis, fugiat itaque iure nesciunt
-            quidem quis quos repellat repudiandae similique soluta tenetur velit voluptas voluptatem voluptates. Ex iure
-            nostrum repudiandae.
-          </PostThumbBody>
+          <PostThumbTitle>{title}</PostThumbTitle>
+          <PostThumbBody>{body}</PostThumbBody>
         </StyledPostThumb>
       </PostThumbLink>
     </Link>

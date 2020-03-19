@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TextInput: React.FC = () => {
+interface TextInputProps {
+  value: string;
+  onChange: Function;
+}
+
+const TextInput: React.FC<TextInputProps> = ({ value, onChange }) => {
   return (
     <TextInputContainer>
-      <TextInputLabel for="input">Заголовок поста</TextInputLabel>
-      <StyledInput id="input" />
+      <TextInputLabel htmlFor="input">Заголовок поста</TextInputLabel>
+      <StyledInput name="title" onChange={onChange} value={value} id="input" />
     </TextInputContainer>
   );
 };

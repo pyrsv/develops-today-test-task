@@ -29,7 +29,7 @@
     "isolatedModules": true
   },
   "exclude": [
-    "node_modules"
+    "_app.tsx"
   ],
   "include": [
     "next-env.d.ts",

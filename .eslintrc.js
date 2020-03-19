@@ -12,7 +12,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    "react/prop-types": [2, { ignore: ['children'] }]
+    "react/prop-types": 0
   },
 
 

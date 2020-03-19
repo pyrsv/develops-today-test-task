@@ -12,7 +12,7 @@ const Nav: React.FC = () => {
           </Link>
         </HeaderMenuItem>
         <HeaderMenuItem>
-          <Link href="/">
+          <Link href="/posts/new">
             <MenuLink>Создать пост</MenuLink>
           </Link>
         </HeaderMenuItem>

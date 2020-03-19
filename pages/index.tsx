@@ -1,17 +1,18 @@
 import React, { Fragment } from 'react';
+import { NextPage } from 'next';
 import Header from '../components/Header';
-// import Post from '../components/Post';
-// import PostsList from '../components/PostList';
+// import PostContainer from '../components/PostContainer';
+import PostsList from '../components/PostList';
 import LayoutContainer from '../components/LayoutContainer';
-import CreatePost from '../components/CreatePost';
+// import CreatePost from '../components/CreatePost';
 
-const Index: React.FC = () => {
+const Index: NextPage<any> = () => {
   return (
     <Fragment>
       <Header />
       <section>
         <LayoutContainer>
-          <CreatePost />
+          <PostsList />
         </LayoutContainer>
       </section>
     </Fragment>

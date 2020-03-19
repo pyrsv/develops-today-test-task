@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Textarea: React.FC = () => {
+interface TextareaProps {
+  value: string;
+  onChange: Function;
+}
+
+const Textarea: React.FC<TextareaProps> = ({ value, onChange }) => {
   return (
     <TextareaContainer>
-      <TextareaLabel for="area">Текст</TextareaLabel>
-      <StyledTextarea id="area" />
+      <TextareaLabel htmlFor="area">Текст</TextareaLabel>
+      <StyledTextarea name="body" onChange={onChange} value={value} id="area" />
     </TextareaContainer>
   );
 };
