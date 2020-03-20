@@ -7,7 +7,7 @@ import LayoutContainer from '../../components/LayoutContainer';
 import Post from '../../components/Post';
 import { getSinglePost } from '../../store/posts/actions';
 
-const PostPage: NextPage<any> = ({ post, getPost,  }) => {
+const PostPage: NextPage<any> = ({ post, getPost }) => {
   const router = useRouter();
   const postId = router.query.postid;
 
@@ -15,16 +15,12 @@ const PostPage: NextPage<any> = ({ post, getPost,  }) => {
     getPost(postId);
   }, []);
 
-
   return (
     <Fragment>
       <Header />
       <section>
         <LayoutContainer>
-          <Post
-            title={post.title}
-            body={post.body}
-          />
+          <Post title={post.title} body={post.body} />
         </LayoutContainer>
       </section>
     </Fragment>
